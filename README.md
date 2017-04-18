@@ -1,5 +1,6 @@
 # CoreMvcWebpack
 April 2017
+
 Simplest possible .NET Core app with MVC, Bootstrap, jQuery, Webpack, and TypeScript debugging. HMR (Hot Module Replacement) enabled in Webpack.
 
 Features:
