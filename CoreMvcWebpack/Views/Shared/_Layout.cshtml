@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - CoreMvcWebpack</title>
+
+    <environment names="Development">
+    </environment>
+    <environment names="Staging,Production">
+    </environment>
+</head>
+<body>
+    <div class="container body-content">
+        @RenderBody()
+        <hr />
+        <footer>
+            <p>&copy; 2017 - CoreMvcWebpack</p>
+        </footer>
+    </div>
+
+    <environment names="Development">
+    </environment>
+    <environment names="Staging,Production">
+    </environment>
+
+    @RenderSection("Scripts", required: false)
+    <script src="~/dist/main-client.js"></script>
+</body>
+</html>
