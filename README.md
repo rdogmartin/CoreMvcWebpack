@@ -9,7 +9,7 @@ Features:
 * TS sourcemapping. That is, adding 'debugger' to TS files correctly triggers TS files in browser F12 dev tools.
 * TS definition files for VS Intellisense of jQuery.
 * Vendor and app JS code split into two files: vendor.js and app.js
-* Vendor and app CSS split into two files: vendor.css and app.css
+* Vendor and app CSS split into two files: vendor.css and styles.css
 
 What it doesn't do:
 * No auto refresh of cshtml pages. Must hit F5 in browser to see changes.
