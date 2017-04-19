@@ -11,11 +11,11 @@ module.exports = {
     },
     devtool: 'source-map',
     resolve: {
-        extensions: ['.ts', '.js', '.json', '.css', '.scss', '.html']
+        extensions: ['.ts', '.js', '.json', '.css', '.html']
     },
     output: {
         path: path.join(__dirname, 'wwwroot'),
-        filename: 'js/[name].js',
+        filename: 'js/[name].js', // js/[name].[chunkhash].js
         publicPath: '/'
     },
 
@@ -29,6 +29,18 @@ module.exports = {
             {
                 test: /\.html$/,
                 use: 'html-loader'
+            },
+            {
+                test: /\.ico/,
+                use: 'file-loader?name=[name].[ext]',
+            },
+            {
+                test: /\.less$/, // Copy .less and less.min.js only in dev
+                use: 'file-loader?name=css/[name].[ext]',
+            },
+            {
+                test: /\less.min.js$/,
+                use: 'file-loader?name=js/[name].[ext]',
             },
             {
                 test: /\.(png|jpg|gif|ico|woff|woff2|ttf|svg|eot)$/,
@@ -63,7 +75,8 @@ module.exports = {
             [
                 './wwwroot/js/',
                 './wwwroot/css/',
-                './wwwroot/assets/'
+                './wwwroot/assets/',
+                './wwwroot/favicon.ico'
             ]
         ),
         // Inject the derived sources into test.html

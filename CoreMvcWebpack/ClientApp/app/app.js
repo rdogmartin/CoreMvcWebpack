@@ -1,7 +1,9 @@
 "use strict";
 require("../vendor");
+require("./styles.less");
+require("./less.min.js");
+require("../favicon.ico");
 console.log('Hello CoreMvcWebpack');
-console.log(jQuery);
 if (module['hot']) {
     module['hot'].accept();
 }

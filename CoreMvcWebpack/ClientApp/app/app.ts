@@ -1,4 +1,7 @@
 ﻿import '../vendor';
+import './styles.less';
+import './less.min.js';
+import '../favicon.ico';
 
 console.log('Hello CoreMvcWebpack');
 
@@ -6,7 +9,7 @@ if (module['hot']) {
     module['hot'].accept();
 }
 
-var message = () => "Hello RDOG. Wassup?";
+var message = () => "This text was dynamically inserted via JS.";
 //debugger;
 document.getElementById("subtitle").innerHTML = message.apply(this);  
 

@@ -11,11 +11,7 @@
   <ItemGroup>
     <Content Include="ClientApp\app\app.js" />
     <Content Include="ClientApp\app\app.ts" />
-    <Content Include="wwwroot\favicon.ico" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <None Include="wwwroot\favicon.ico" />
+    <Content Include="ClientApp\favicon.ico" />
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="Microsoft.AspNetCore" Version="1.1.1" />

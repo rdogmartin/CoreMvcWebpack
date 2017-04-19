@@ -33,7 +33,14 @@ namespace CoreMvcWebpack
                 });
             }
 
-            app.UseStaticFiles();
+            // Enable LESS files. If we don't care about them, we can just use app.UseStaticFiles().
+            var contentTypeProvider = new Microsoft.AspNetCore.StaticFiles.FileExtensionContentTypeProvider();
+            contentTypeProvider.Mappings[".less"] = "text/css";
+
+            app.UseStaticFiles(new StaticFileOptions()
+            {
+                ContentTypeProvider = contentTypeProvider
+            });
 
             app.UseMvc(routes =>
             {
